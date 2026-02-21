@@ -1,0 +1,44 @@
+Radiology Report
+Patient Name: [Full Name]
+
+Date of Birth: [MM/DD/YYYY]
+
+Patient ID: [ID Number]
+
+Date of Exam: [MM/DD/YYYY]
+
+Examination: [e.g., CT Chest W/O Contrast, MRI Lumbar Spine]
+
+Clinical Indication
+[Brief description of the reason for the scan, e.g., "65-year-old male with chronic cough and history of smoking."]
+
+Comparison
+[List prior studies here, e.g., "Compared with Chest X-ray dated 10/12/2025."]
+
+Technique
+[Description of the procedure, e.g., "Multiplanar multisequence MRI of the lumbar spine was performed without intravenous gadolinium."]
+
+Findings
+[Anatomical Area 1]: [Specific observations, measurements, and appearance.]
+
+[Anatomical Area 2]: [Note any abnormalities or lack thereof—e.g., "No evidence of acute fracture."]
+
+[Anatomical Area 3]: [Include incidental findings.]
+
+Impression
+[Primary Finding]: [The most important conclusion, e.g., "Acute non-displaced fracture of the distal radius."]
+
+[Secondary Finding]: [e.g., "Mild degenerative changes at the radiocarpal joint."]
+
+Radiologist: [Name/Signature]
+
+NPI Number: [Number]
+
+Date/Time Signed: [MM/DD/YYYY, HH:MM]
+
+Best Practices for Drafting
+Use Standardized Lexicon: Use terms consistent with BI-RADS (Breast), PI-RADS (Prostate), or LI-RADS (Liver) where applicable.
+
+Be Decisive: Avoid "hedging" unless necessary. Use "suggestive of" or "consistent with" rather than vague language.
+
+Highlight Critical Results: If there is a life-threatening finding (e.g., tension pneumothorax), document that the referring physician was notified immediately.
