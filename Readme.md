@@ -7,8 +7,10 @@ ____
 An AI-driven triage and reporting system designed for Malaysian clinics that lack on-site professional radiologists. This solution automates X-ray analysis, evaluates critical levels, and generates editable medical reports to reduce patient bottlenecks and assist medical staff.
 
 **SDG Alignment:** SDG 3: Good Health and Well-being
+
 ## Problem statement 
-Malaysian clinics frequently lack on-site professional radiologists, creating patient bottlenecks and delaying the triage of critical cases like tumors. Radiologists report that they faced unbearable work load and unmanageable patient counts. Citizens live in the rural area report that they don't have access to a professional radiologist after they got their ct scan from technicians. 
+Malaysian clinics frequently lack on-site professional radiologists, creating patient bottlenecks and delaying the triage of critical cases like tumors. Radiologists report that they faced unbearable work load and unmanageable patient counts. Citizens live in the rural area report that they don't have access to a professional radiologist after they got their ct scan from technicians. With only 870 registered radiologists catering to a population of 33.57 million, the ratio is 3.9 per 100000 individuals. (National Library of Medicine). Approximately 75% of Malaysia's population lives in urban areas, where 80% of radiological services are private. Trainees and non-radiologists have a 69% accuracy rate in interpreting plain radiographs, raising quality concerns. (Ramli N, Academia.edu)
+
 ## Features
 * **Automated X-Ray Analysis:** YOLO detects and highlights potential tumors.
 * **Smart Triage & Reporting:** The Gemini API acts as an AI radiologist, evaluating visual data and text reports to classify criticality (Low/Medium/High) and generating editable, downloadable summaries.
