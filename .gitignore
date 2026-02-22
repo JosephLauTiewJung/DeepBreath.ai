@@ -6,3 +6,4 @@ PythonBackend/.env
 PythonBackend/med-vision-dd803-firebase-adminsdk-fbsvc-b2d1e45f07.json
 SpringBootBackend/.mvn
 SpringBootBackend/src/main/resources/med-vision-dd803-firebase-adminsdk-fbsvc-b2d1e45f07.json
+.vscode

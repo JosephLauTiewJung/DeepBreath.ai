@@ -15,6 +15,7 @@ from PIL import Image
 import io
 from .models.FindDoctorRequestBaseModel import FindDoctorRequestBaseModel, Location
 import numpy as np
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
