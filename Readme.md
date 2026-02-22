@@ -71,3 +71,15 @@ mvn spring-boot:run # start with maven / mvnd if maven daemon
 
 ### Datasets for the training of the YOLO model 
 **google drive link** https://drive.google.com/drive/folders/1cK8WNZ4Yoa0kK7M21Zs6XDl_nXNyuvL-?usp=drive_link
+
+### YOLO Model metrics 
+* normalized confusion matrix 
+![confusion_matrix_normalized](confusion_matrix_normalized.png)
+* Box F1 curve 
+![BoxF1_curve](BoxF1_curve.png)
+* Box P curve 
+![BoxF1_curve](BoxF1_curve-1.png)
+* Box PR curve
+![BoxPR_curve](BoxPR_curve.png)
+* Box R curve 
+![BoxR_curve](BoxR_curve.png)
