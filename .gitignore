@@ -5,6 +5,7 @@ PythonBackend/venv
 PythonBackend/.env
 PythonBackend/config.json
 SpringBootBackend/.mvn
-SpringBootBackend/target
 SpringBootBackend/src/main/resources/config.json
+SpringBootBackend/src/main/resources/static/*
+SpringBootBackend/target/*
 .vscode

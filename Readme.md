@@ -85,3 +85,14 @@ mvn spring-boot:run # start with maven / mvnd if maven daemon
 ![BoxPR_curve](BoxPR_curve.png)
 * Box R curve 
 ![BoxR_curve](BoxR_curve.png)
+
+### 5. Future Suggestions
+**Google Cloud Healthcare API Integration**
+* Currently, the app is processing standard images (PNG/JPEG). To make this a true enterprise clinical solution, migrate to the Google Cloud Healthcare API. This API natively supports the DICOMweb standard (the global standard for medical imaging) and includes built-in tools for automated patient data de-identification, which is crucial for medical compliance.
+
+**Active Learning Pipeline (Doctor-in-the-Loop**
+* Allow doctors to manually adjust or delete YOLO bounding boxes on the React frontend if the AI makes a mistake. Save these corrected coordinates back to Firestore to create a continuous fine-tuning loop for 
+your YOLO model.
+
+**Centralised Database with critical level notification system** 
+* Allow the radiologist to batch upload patient’s ct scan. The ct scan is stored in a centralised high performance object storage such as AWS S3. The radiologists is alerted based on the critical level of the patient’s tumor
