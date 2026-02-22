@@ -21,7 +21,7 @@ public class FireStoreConfig {
     private FirebaseOptions options;
     private boolean initialized = false;
     private static final Logger logger = Logger.getLogger(FireStoreConfig.class.getName());
-    @Value("classpath:med-vision-dd803-firebase-adminsdk-fbsvc-b2d1e45f07.json")
+    @Value("classpath:config.json")
     private Resource serviceJson;
     public Firestore initializeFirestore() {
         // Firestore initialization logic

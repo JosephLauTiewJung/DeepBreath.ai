@@ -1,7 +1,10 @@
 import firebase_admin
 from firebase_admin import firestore, credentials
+from pathlib import Path
 # Application Default credentials are automatically created.
-cred = credentials.Certificate(r'C:\Users\josep\Desktop\breast_tumor_detection\med-vision-dd803-firebase-adminsdk-fbsvc-b2d1e45f07.json')
+BASE_DIR = Path(__file__).resolve().parent.parent
+file_path = BASE_DIR / 'config.json'
+cred = credentials.Certificate(file_path)
 app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 collection = db.collection("users")

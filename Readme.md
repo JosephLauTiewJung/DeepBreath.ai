@@ -41,7 +41,9 @@ This setup instructions is for those who are using windows command prompt. For t
 
 ### 1. Setup API Key 
 1. Navigate to frontend/.env VITE_GOOGLE_MAP_API_KEY={YOUR_GOOGLE_MAP_API_KEY}
-2. Navigate to PythonBackend/, copy and paste your 
+2. Navigate to PythonBackend/, paste your firebase configuration json file as config.json
+3. In the same directory, create a .env file and paste your GEMINI_API_KEY={YOUR GEMINI API KEY}
+4. Navigate to SpringBootBackend\src\main\resources, paste your firebase configuration json file as config.json 
 ### 2. Frontend (React)
 ```bash
 cd frontend
