@@ -9,7 +9,7 @@ An AI-driven triage and reporting system designed for Malaysian clinics that lac
 **SDG Alignment:** SDG 3: Good Health and Well-being
 
 ## Problem statement 
-Malaysian clinics frequently lack on-site professional radiologists, creating patient bottlenecks and delaying the triage of critical cases like tumors. Radiologists report that they faced unbearable work load and unmanageable patient counts. Citizens live in the rural area report that they don't have access to a professional radiologist after they got their ct scan from technicians. With only 870 registered radiologists catering to a population of 33.57 million, the ratio is 3.9 per 100000 individuals. (National Library of Medicine). Approximately 75% of Malaysia's population lives in urban areas, where 80% of radiological services are private. Trainees and non-radiologists have a 69% accuracy rate in interpreting plain radiographs, raising quality concerns. (Ramli N, Academia.edu)
+Malaysian clinics frequently lack on-site professional radiologists, creating patient bottlenecks and delaying the triage of critical cases like tumors. Radiologists report that they faced unbearable workload and unmanageable patient counts. Citizens live in the rural area report that they don't have access to a professional radiologist after they got their CT scan  from technicians. With only 870 registered radiologists catering to a population of 33.57 million, the ratio is 3.9 per 100000 individuals. (National Library of Medicine). Approximately 75% of Malaysia's population lives in urban areas, where 80% of radiological services are private. Trainees and non-radiologists have a 69% accuracy rate in interpreting plain radiographs, raising quality concerns. (Ramli N, Academia.edu)
 
 ## Features
 * **Automated X-Ray Analysis:** YOLO detects and highlights potential tumors.
@@ -22,18 +22,36 @@ Malaysian clinics frequently lack on-site professional radiologists, creating pa
 * **Backend:** Spring Boot (Core logic/Routing), FastAPI (AI/Model serving)
 * **AI Models:** Gemini API (Text/Context analysis), YOLO (Tumor detection)
 * **API Services** Google Map API (Find relevant specialist), Firebase authentication (user registration and login)
-* ** Database** FireStore (store user informations)
+* **Database** FireStore (store user information)
 
 ## Technical Architecture & Implementation
-The system utilizes a microservices architecture. The React frontend securely uploads X-rays to Firebase. 
-The FastAPI backend handles the YOLO object detection and constructs a JSON payload containing bounding boxes 
-and patient data. This payload is sent to the Gemini API for final evaluation and report generation. 
-Spring Boot handles most of the business logic, such as storing user data, sending data to python backend server side for AI operations.
+* The system utilizes a microservices architecture. The React frontend securely uploads X-rays to Firebase. 
+* The FastAPI backend handles the YOLO object detection and constructs a JSON payload containing bounding boxes and patient data. This payload is sent to the Gemini API for final evaluation and report generation. 
+* Spring Boot handles most of the business logic, such as ring user data, sending data to python backend server side for AI operations.
 
-## Innovation & Challenges Faced
+## Innovation
 * **Innovation:** Combining computer vision (YOLO) with LLM reasoning (Gemini) to create a comprehensive, context-aware medical evaluation pipeline, bridging the gap between basic clinics and specialized care. YOLO is used because it is extremely light-weight and fast, which save the compute resources for GEMINI LLM complex agentic workflow.
-* **Challenges:** Integrating asynchronous Python-based AI microservices (FastAPI) with a robust Java backend (Spring Boot) while ensuring low-latency responses for real-time clinic use. Resolved by establishing strict JSON contracts and optimizing API calls.
+* Integrating asynchronous Python-based AI microservices (FastAPI) with a robust Java backend (Spring Boot) while ensuring low-latency responses for real-time clinic use. Resolved by establishing strict JSON contracts and optimizing API calls.
 
+## Project Structure 
+```
+med-vision/
+├── frontend/ (user interface)
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── PythonBackend/ (ai agents and yolo object recognition)
+│   ├── app/
+│   ├── models/
+│   └── requirements.txt
+├── SpringBootBackend/ (core backend business logic, e.g. user authentication, store user info, send data to PythonBackend)
+│   ├── src/
+│   └── pom.xml
+└── README.md
+```
+
+## Architecture Diagram 
+![architecture diagram](<architecture diagram-1.png>)
 ## Setup Instructions
 This setup instructions is for those who are using windows command prompt. For the Mac and Linux users please search for the instructions online.
 ### Prerequisites
@@ -86,13 +104,13 @@ mvn spring-boot:run # start with maven / mvnd if maven daemon
 * Box R curve 
 ![BoxR_curve](BoxR_curve.png)
 
-### 5. Future Suggestions
+### Future Suggestions
 **Google Cloud Healthcare API Integration**
 * Currently, the app is processing standard images (PNG/JPEG). To make this a true enterprise clinical solution, migrate to the Google Cloud Healthcare API. This API natively supports the DICOMweb standard (the global standard for medical imaging) and includes built-in tools for automated patient data de-identification, which is crucial for medical compliance.
 
-**Active Learning Pipeline (Doctor-in-the-Loop**
+**Active Learning Pipeline (Doctor-in-the-Loop)**
 * Allow doctors to manually adjust or delete YOLO bounding boxes on the React frontend if the AI makes a mistake. Save these corrected coordinates back to Firestore to create a continuous fine-tuning loop for 
 your YOLO model.
 
 **Centralised Database with critical level notification system** 
-* Allow the radiologist to batch upload patient’s ct scan. The ct scan is stored in a centralised high performance object storage such as AWS S3. The radiologists is alerted based on the critical level of the patient’s tumor
+* Allow the radiologist to batch upload patient’s CT scan. The CT scan is stored in a centralised high performance object storage such as AWS S3. The radiologists is alerted based on the critical level of the patient’s tumor
