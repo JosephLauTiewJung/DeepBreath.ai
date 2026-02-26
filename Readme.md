@@ -1,5 +1,5 @@
 # Kitahack 2026
-## Project Name: Med Vision
+## Project Name: DeepBreath AI
 ### Group name: abc
 ### Team Members: Joseph Lau Tiew Jung
 ____
