@@ -50,6 +50,9 @@ med-vision/
 └── README.md
 ```
 
+## Demo Video 
+* Please refer to to the youtube link below
+https://youtu.be/FfHpDjFH2iI
 ## Architecture Diagram 
 ![architecture diagram](<architecture diagram-1.png>)
 ## Setup Instructions
