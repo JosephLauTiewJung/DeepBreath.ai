@@ -52,7 +52,7 @@ med-vision/
 
 ## Demo Video 
 * Please refer to to the youtube link below
-https://youtu.be/FfHpDjFH2iI
+https://youtu.be/bJz_XHVnbxw
 ## Architecture Diagram 
 ![architecture diagram](<architecture diagram-1.png>)
 ## Setup Instructions
